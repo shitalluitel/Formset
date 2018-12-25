@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	<table>
+     <thead>
+         <th>
+             name
+         </th>
+         <th>gender</th>
+         <th>age</th>
+     </thead>   
+     <tbody>
+         {% for data in datas %}
+           <tr>
+                <td>{{ data.name }}</td>
+            <td>{{ data.gender }}</td>
+            <td> {{ data.age }}</td>
+           </tr>
+         {% endfor %}
+     </tbody>
+    </table>
+	
+{% endblock %}
